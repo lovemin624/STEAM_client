@@ -7,15 +7,13 @@ package com.sopt.steam.network;
 import com.sopt.steam.join.model.JoinUser;
 import com.sopt.steam.login.model.Authentication;
 import com.sopt.steam.login.model.User;
-import com.sopt.steam.main.model.RecModel;
-import com.squareup.okhttp.RequestBody;
+import com.sopt.steam.profile.model.UserProfile;
 
 import retrofit.Call;
 import retrofit.http.Body;
 import retrofit.http.GET;
-import retrofit.http.Multipart;
 import retrofit.http.POST;
-import retrofit.http.Part;
+import retrofit.http.Path;
 
 public interface NetworkService {
 
@@ -34,10 +32,8 @@ public interface NetworkService {
     @POST("/membership")
     Call<User> registerUser(@Body JoinUser user);
 
-    //녹음
-    @Multipart
-    @POST("/rec")
-    Call<RecModel> postToServer(@Part("recdata\"; filename=\"rec.mp4\" ") RequestBody recData,
-                                @Part("contents") RecModel recModel);
+    //프로필 가져오기
+    @GET("/profile/{user_id}")
+    Call<UserProfile> getUserProfile(@Path("user_id") String user_id);
 
 }

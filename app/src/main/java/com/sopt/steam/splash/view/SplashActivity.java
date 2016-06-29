@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.sopt.steam.ErrorController;
 import com.sopt.steam.R;
-import com.sopt.steam.login.view.LoginActivity;
 import com.sopt.steam.main.view.MainActivity;
 import com.sopt.steam.splash.presenter.SplashPresenterImpl;
 
@@ -28,7 +27,7 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
             intent = new Intent(getApplicationContext(), MainActivity.class);
         }
         else if(statusCode == 401){
-            intent = new Intent(getApplicationContext(), LoginActivity.class);
+            intent = new Intent(getApplicationContext(), MainActivity.class);
         }
         else {
             return;

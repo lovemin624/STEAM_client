@@ -5,6 +5,7 @@ import android.app.Application;
 import com.sopt.steam.login.model.User;
 import com.sopt.steam.main.model.RecModel;
 import com.sopt.steam.network.NetworkService;
+import com.sopt.steam.profile.model.UserProfile;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -79,6 +80,13 @@ public class ApplicationController extends Application {
     public void setLoginUser(User user){
         loginUser = user;
     }
+
+    private static UserProfile profileUser;
+    public void setUserProfile(UserProfile profile){
+        profileUser = profile;
+    }
+
+    public UserProfile getUserProfile() { return profileUser; }
 
     public User getLoginUser(){
         return loginUser;
