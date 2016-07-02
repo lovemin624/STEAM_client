@@ -1,6 +1,7 @@
 package com.sopt.steam.main.presenter;
 
 import com.sopt.steam.application.ApplicationController;
+import com.sopt.steam.main.model.MainStatus;
 import com.sopt.steam.main.view.MainView;
 
 /**
@@ -10,11 +11,32 @@ public class MainPresenterImpl implements MainPresenter {
 
     ApplicationController api;
     MainView view;
+    MainStatus status;
 
+
+/*
     public MainPresenterImpl(MainView view) {
         this.view = view;
         api = ApplicationController.getInstance();
     }
+
+    @Override
+    public void connectServer() {
+        NetworkService networkService = api.getNetworkService();
+        Call<User> loginTest = networkService.getSession();
+        loginTest.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Response<User> response, Retrofit retrofit) {
+                view.connectingSucceed(response.code());
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                view.networkError();
+            }
+        });
+    }
+*/
 
     /*
     @Override

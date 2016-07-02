@@ -3,9 +3,7 @@ package com.sopt.steam.application;
 import android.app.Application;
 
 import com.sopt.steam.login.model.User;
-import com.sopt.steam.main.model.RecModel;
 import com.sopt.steam.network.NetworkService;
-import com.sopt.steam.profile.model.UserProfile;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -81,21 +79,18 @@ public class ApplicationController extends Application {
         loginUser = user;
     }
 
-    private static UserProfile profileUser;
-    public void setUserProfile(UserProfile profile){
-        profileUser = profile;
-    }
-
-    public UserProfile getUserProfile() { return profileUser; }
-
     public User getLoginUser(){
         return loginUser;
     }
 
-    private static RecModel recModel;
-    public RecModel getRecModel() { return recModel; }
-    public void setRecModel(RecModel recModel) {
-        ApplicationController.recModel = recModel;
+
+    public static boolean chkBoolean = false;
+    public void setCheck(boolean chkBoolean) {
+        this.chkBoolean = chkBoolean;
+    }
+
+    public boolean getCheck() {
+        return chkBoolean;
     }
 
 }

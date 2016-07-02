@@ -3,11 +3,13 @@ package com.sopt.steam.login.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.sopt.steam.ErrorController;
 import com.sopt.steam.R;
+import com.sopt.steam.application.ApplicationController;
 import com.sopt.steam.join.view.JoinActivity;
 import com.sopt.steam.login.model.Authentication;
 import com.sopt.steam.login.presenter.LoginPresenter;
@@ -24,6 +26,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     EditText login_edit_id;
     @Bind(R.id.login_edit_passwd)
     EditText login_edit_passwd;
+
+    ApplicationController api;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +89,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     @Override
     public void loginSucceed(String user_id) {
         Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
-
+        ApplicationController api = new ApplicationController();
+        boolean chkboolean = true;
+        api.setCheck(chkboolean);
+        Log.i("MyTag", "상태 확인 :" + chkboolean);
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
         finish();

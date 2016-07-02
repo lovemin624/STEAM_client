@@ -6,4 +6,5 @@ package com.sopt.steam.main.presenter;
 public interface MainPresenter {
 
     //void postToServer(RecModel recModel, RequestBody recData);
+ //   void connectServer();
 }

@@ -36,4 +36,5 @@ public class SplashPresenterImpl implements SplashPresenter {
             }
         });
     }
+
 }
