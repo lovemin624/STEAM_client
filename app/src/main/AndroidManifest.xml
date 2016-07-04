@@ -3,6 +3,9 @@
     package="com.sopt.steam">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -16,22 +19,72 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
         <activity
-            android:name=".main.view.MainActivity"
-            android:label="STEAM"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".splash.view.SplashActivity">
+            android:name=".splash.view.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".profile.view.ProfileActivity" />
-        <activity android:name=".login.view.LoginActivity" />
+        <activity
+            android:name=".board.BoardView"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".main.view.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".board.BoardRegister"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".board.BoardDetail"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".favorite.FavoriteSpace"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".ChooseProfile" />
+        <activity
+            android:name=".profile.view.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".login.view.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing"/>
         <activity android:name=".join.view.JoinActivity" />
+        <activity android:name=".join.view.JoinCharActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".sliding.SlidingDetail"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing"></activity>
+        <activity android:name=".sliding.information.informationRow" />
+        <activity android:name=".sliding.PriceTime.PriceTimeRow" />
+        <activity android:name=".sliding.PriceTime.PriceTimeHeader" />
+        <activity android:name=".sliding.reviewList.ReviewListRow" />
+        <activity
+            android:name=".sliding.Review"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".TestActivity"
+            android:label="STEAM"
+            android:theme="@style/AppTheme.NoActionBar" />
 
     </application>
 

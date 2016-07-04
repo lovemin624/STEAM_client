@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="mainColor">#022261</color>
+    <color name="background_color">#fff2cc</color>
+    <color name="tab_color">#ffd967</color>
+    <color name="studyroom_name">#deebf7</color>
 </resources>

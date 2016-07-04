@@ -28,6 +28,14 @@ public interface NetworkService {
     @GET("/session/sign/out")
     Call<Object> logout();
 
+    //아이디 중복 확인
+    @GET("/membership/{user_id}")
+    Call<String> duplicationTest(@Path("user_id") String user_id);
+
+    //닉네임 중복 확인
+    @GET("/membership/name/{name}")
+    Call<String> duplicationName(@Path("name") String name);
+
     //회원가입
     @POST("/membership")
     Call<User> registerUser(@Body JoinUser user);
@@ -35,5 +43,7 @@ public interface NetworkService {
     //프로필 가져오기
     @GET("/profile/{user_id}")
     Call<UserProfile> getUserProfile(@Path("user_id") String user_id);
+
+
 
 }

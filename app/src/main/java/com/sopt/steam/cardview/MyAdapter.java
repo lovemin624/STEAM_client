@@ -1,4 +1,4 @@
-package com.sopt.steam;
+package com.sopt.steam.cardview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.sopt.steam.R;
+
 import java.util.ArrayList;
+
+
 
 /**
  * Created by parkkyounghyun on 2016. 6. 28..
@@ -46,7 +50,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
         // create a new view
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_view, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.listview_main, parent, false);
         // set the view's size, margins, paddings and layout parameters
 
         ViewHolder vh = new ViewHolder(v);

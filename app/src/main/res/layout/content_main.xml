@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.sopt.steam.main.view.MainActivity"
+    tools:context="com.sopt.steam.MainActivity"
     tools:showIn="@layout/app_bar_main"
     android:orientation="vertical"
     android:weightSum="10">
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -36,9 +38,9 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/findLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/tempcircle"
                     android:text="지역"
                     android:textSize="21dp"
                     android:layout_margin="5dp"/>
@@ -56,9 +58,9 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/findKind"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/tempcircle"
                     android:text="업종"
                     android:textSize="21dp"
                     android:layout_margin="5dp"/>
@@ -77,9 +79,9 @@
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/findPeople"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/tempcircle"
                     android:text="인원수"
                     android:textSize="21dp"
                     android:layout_margin="5dp"/>
@@ -94,30 +96,16 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/mainArea"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.6"
-            android:paddingLeft="5dp">
+            android:layout_weight="8.5">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:paddingLeft="10dp"
-                android:textSize="17sp"
-                android:textColor="#000000"
-                android:text="할인 / 추천장소"/>
+            <include layout="@layout/activity_main_basic" />
 
         </LinearLayout>
 
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/my_recycler_view"
-            android:scrollbars="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="7.9"/>
-
-
     </LinearLayout>
+
 </LinearLayout>

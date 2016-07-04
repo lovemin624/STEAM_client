@@ -20,10 +20,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.sopt.steam.ErrorController;
-import com.sopt.steam.MyAdapter;
-import com.sopt.steam.MyData;
 import com.sopt.steam.R;
+import com.sopt.steam.TestActivity;
 import com.sopt.steam.application.ApplicationController;
+import com.sopt.steam.cardview.MyAdapter;
+import com.sopt.steam.cardview.MyData;
 import com.sopt.steam.login.view.LoginActivity;
 import com.sopt.steam.profile.view.ProfileActivity;
 
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements MainView {
     private Button moveTop;
     private Button searchBtn;
 
+    private Toolbar toolbar;
+
     ApplicationController api;
     MainView view;
 
@@ -51,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -263,15 +266,16 @@ public class MainActivity extends AppCompatActivity implements MainView {
             }
 
         } else if (id == R.id.nav_myPlace) {
+            Intent intent = new Intent(getApplicationContext(), TestActivity.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_myLike) {
 
         }
-//        else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
+        else if (id == R.id.nav_monStory) {
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

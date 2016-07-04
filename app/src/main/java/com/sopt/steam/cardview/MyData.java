@@ -1,4 +1,4 @@
-package com.sopt.steam;
+package com.sopt.steam.cardview;
 
 /**
  * Created by parkkyounghyun on 2016. 6. 28..

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,6 +29,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     @Bind(R.id.login_edit_passwd)
     EditText login_edit_passwd;
 
+    Button login_btn_join;
     ApplicationController api;
 
     @Override
@@ -34,11 +37,23 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        login_btn_join = (Button)findViewById(R.id.login_btn_join);
+
+        login_btn_join.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         ButterKnife.bind(this);
+
 
         /*
         //로그인 버튼
-        btn_login = (Button)findViewById(R.id.login_btn_login);
+        login_btn_login = (Button)findViewById(R.id.login_btn_login);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,12 +77,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
 
-
-    @OnClick(R.id.login_btn_join)
-    public void setBtn_join() {
-        Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
-        startActivity(intent);
-    }
 
     @OnClick(R.id.login_btn_login)
     public void setBtn_login() {

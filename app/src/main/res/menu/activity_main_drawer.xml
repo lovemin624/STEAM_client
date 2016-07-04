@@ -9,11 +9,28 @@
         <item
             android:id="@+id/nav_myPlace"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="내가 찜한 장소" />
+            android:title="내가 찜한 공간" />
         <item
             android:id="@+id/nav_myLike"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="자주 찾는 공간 검색" />
+            android:title="즐겨가는 장소" />
+        <item
+            android:id="@+id/nav_monStory"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="몬스터들의 이야기" />
     </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>

@@ -6,5 +6,6 @@ package com.sopt.steam.join.view;
 public interface JoinView {
 
     void networkError();
-    void registerSucceed();
+    void isDuplicated(String result);
+    void isNameDuplicated(String result);
 }

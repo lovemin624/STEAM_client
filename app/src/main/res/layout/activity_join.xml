@@ -4,109 +4,120 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.sopt.steam.join.view.JoinActivity">
+    tools:context="com.sopt.steam.join.view.JoinActivity"
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="ID"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="20sp"/>
-
-        <EditText
-            android:id="@+id/join_edit_id"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="20dp"/>
-
+        android:layout_weight="0.15">
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="0.6"
+        android:weightSum="1"
+        android:layout_margin="20sp">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="비밀번호"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:weightSum="1">
+
+            <EditText
+                android:layout_weight="0.75"
+                android:id="@+id/join_edit_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="아이디를 입력하세요"
+                android:singleLine="true"
+                android:maxLength="30"/>
+            <Button
+                android:id="@+id/join_btn_idDupl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="중복확인"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:weightSum="1">
+
+            <EditText
+                android:layout_weight="0.75"
+                android:id="@+id/join_edit_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:hint="닉네임을 입력하세요"
+                android:singleLine="true"
+                android:maxLength="30"/>
+            <Button
+                android:id="@+id/join_btn_nameDupl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="중복확인"/>
+        </LinearLayout>
+
 
         <EditText
+            android:layout_weight="0.2"
+            android:id="@+id/join_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="이메일을 입력하세요"
+            android:singleLine="true"
+            android:maxLength="30"/>
+        <EditText
+            android:layout_weight="0.2"
             android:id="@+id/join_edit_passwd"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="20dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="비밀번호를 입력하세요"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:maxLength="15"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="이름"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="20sp"/>
 
         <EditText
-            android:id="@+id/join_edit_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="20dp"/>
+            android:layout_weight="0.2"
+            android:id="@+id/join_edit_passwd_conf"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="비밀번호를 한번 더 입력하세요"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:maxLength="15"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center">
+        android:layout_weight="0.15"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp">
 
         <Button
-            android:id="@+id/join_btn_join"
+            android:id="@+id/join_btn_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="가입하기"/>
+            android:text="다음"/>
 
-        <Button
-            android:id="@+id/join_btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="취소"/>
 
     </LinearLayout>
 

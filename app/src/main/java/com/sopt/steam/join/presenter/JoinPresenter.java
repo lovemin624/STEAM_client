@@ -8,4 +8,8 @@ import com.sopt.steam.join.model.JoinUser;
 public interface JoinPresenter {
 
     void registerToServer(JoinUser user);
+
+    void checkIdDuplication(String user_id);
+
+    void checkNameDuplication(String name);
 }
